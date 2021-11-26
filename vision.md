@@ -1,12 +1,12 @@
 # Time2Bee - Vision du projet
 
-## Qui est la cible ?
+## Qui est la ou les cible(s) ?
 
-La cible sont les visiteurs du jardin botanique Jean-Marie Pelt de Vandoeuvre-les-Nancy.
+Les cibles sont les visiteurs du jardin botanique Jean-Marie Pelt de Vandoeuvre-les-Nancy.
 
 ## À quels besoins le produit va-t-il répondre ?
 
-S'intruire sur le mode de vie des abeilles de façon ludique dans un environnement réel.
+S'instruire sur le mode de vie des abeilles de façon ludique dans un environnement réel.
 
 ## Quelles sont les fonctionnalités critiques pour répondre aux besoins de façon à avoir un produit réussi ?
 
@@ -23,4 +23,4 @@ Dans son domaine, le produit n'a pas d'autres concurrents directs.
 ## Quel est le délai et quel est le budget dédié pour le développement et la livraison du produit ?
 
 Le délai est de 4 semaines. Le budget dédié est d'environ 0 €.
-Avec un budget aussi séré on va utiliser un serveur personnel pour héberger l'application lors des livraisons.
+Avec un budget aussi serrer, on va utiliser un serveur personnel pour héberger l'application lors des livraisons.
