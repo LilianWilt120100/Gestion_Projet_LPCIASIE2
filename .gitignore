@@ -69,3 +69,5 @@ local.properties
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
 >>>>>>> 07b6c44de3f41548358ec5003732a2e4251c996e
+
+node_modules/
