@@ -6,7 +6,7 @@ En scannant le/les QR-Codes de départ situés au niveau des entrées. Ce QR-Cod
 
 ## Comment progresser ?
 
-En scannant des QR-Codes situés devant les fleurs. Chaque fleur rapporte une certaine quantité de points de victoire (*"nectar"*) ou une certaine quantité d'énergie (*"pollen"*). Pour récupérer des points de victoire (*"nectar"*), il faut dépenser de l'énergie (*"pollen"*). Pour valider ses points de victoire, il faut rentrer à la *"ruche"* avant que le temps ne soit dépassé. Le nombre maximal de points de victoire est atteint lorsque le pot de *"nectar"* est plein.
+En scannant des QR-Codes situés devant les fleurs. Chaque fleur rapporte une certaine quantité de points de victoire (*"pollen"*) ou une certaine quantité d'énergie (*"nectar"*). Pour récupérer des points de victoire, il faut dépenser de l'énergie. Pour valider ses points de victoire, il faut rentrer à la *"ruche"* avant que le temps ne soit dépassé. Le nombre maximal de points de victoire est atteint lorsque le pot de *"pollen"* est plein.
 
 ## Quand finir ?
 
