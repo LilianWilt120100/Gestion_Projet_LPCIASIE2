@@ -68,6 +68,7 @@ local.properties
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
->>>>>>> 07b6c44de3f41548358ec5003732a2e4251c996e
-
 node_modules/
+
+# DB Data
+server/data.json
