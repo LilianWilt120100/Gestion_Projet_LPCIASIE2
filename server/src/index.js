@@ -16,7 +16,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDoc = require("yamljs").load("./swagger.yml");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
-app.use("/plants", routerPlants);
+app.use("/api/plants", routerPlants);
 
 app.listen(port, () => {
 	console.log(`Time2Bee backend listening at http://localhost:${port}`);
