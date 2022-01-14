@@ -33,19 +33,32 @@ router.get("/", (req, res) => {
  */
 router.post("/", async (req, res) => {
 	const { name, latin_name, description, images, pollen, nectar } = req.body;
-	const plant = {
-		id: uuidv4(),
-		name,
-		latin_name,
-		description,
-		images,
-		pollen,
-		nectar,
-		creationDate: new Date(),
-		editedDate: new Date(),
-	};
-	await db.get("plants").push(plant).write();
-	res.json(plant);
+	// Check duplicates
+	if (
+		[...db.get("plants")].find(
+			(p) => p.name === name && p.latin_name === latin_name
+		)
+	) {
+		res.status(409).json({
+			status: 409,
+			message: "Plant already exist",
+		});
+	} else {
+		// Putting plant in DB
+		const plant = {
+			id: uuidv4(),
+			name,
+			latin_name,
+			description,
+			images,
+			pollen,
+			nectar,
+			creationDate: new Date(),
+			editedDate: new Date(),
+		};
+		await db.get("plants").push(plant).write();
+		res.status(201).json(plant);
+	}
 });
 
 /**
@@ -61,6 +74,53 @@ router.get("/:plantId", async (req, res) => {
 	const plant = [...db.get("plants")].find(({ id }) => plantId === id);
 	if (plant) {
 		res.json(plant);
+	} else {
+		res.status(404).json({
+			status: 404,
+			message: "Plant not found",
+		});
+	}
+});
+
+/**
+ * @api {put} /plants/:plant Edit plant informations
+ * @apiName EditPlant
+ * @apiGroup Plants
+ * @apiDescription Edit the infos of a plant. Add it if doesn't exist.
+ *
+ * @apiSuccess {object} result The plant
+ */
+router.put("/:plantId", async (req, res) => {
+	const { plantId } = req.params;
+	const { name, latin_name, description, images, pollen, nectar } = req.body;
+	// Check if exist
+	const plants = [...db.get("plants")];
+	const index = plants.findIndex(({ id }) => id === plantId);
+	if (index >= 0) {
+		// Check for duplicates
+		const indexDup = plants.findIndex(
+			(p) => p.name === name && p.latin_name === latin_name
+		);
+		if (indexDup <= 0 || indexDup === index) {
+			const plant = {
+				id: plantId,
+				name,
+				latin_name,
+				description,
+				images,
+				pollen,
+				nectar,
+				creationDate: plants[index].creationDate,
+				editedDate: new Date(),
+			};
+			await db.get("plants").splice(index, 1, plant).write();
+			res.json(plant);
+		} else {
+			res.status(404).json({
+				status: 404,
+				message: "Plant with same name or latin_name already exist",
+			});
+		}
 	} else {
 		res.status(404).json({
 			status: 404,
