@@ -4,9 +4,9 @@
 
 ```sh
 npm i
-npx cap run android # Nécéssite Android Studio
+npm run start:android # Nécéssite Android Studio
 # ou
-npx cap run ios # Nécéssite XCode
+npm run start:ios # Nécéssite XCode
 ```
 
 ## Deployement

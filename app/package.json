@@ -2,15 +2,23 @@
 	"name": "time2bee",
 	"version": "1.0.0",
 	"description": "",
-	"scripts": {},
+	"scripts": {
+		"build": "webpack",
+		"start:ios": "cap run ios",
+		"start:android": "cap run android"
+	},
 	"author": "",
 	"license": "ISC",
+	"private": true,
 	"dependencies": {
+		"@capacitor-community/barcode-scanner": "^2.0.1",
 		"@capacitor/android": "^3.3.4",
 		"@capacitor/core": "^3.3.4",
 		"@capacitor/ios": "^3.3.4"
 	},
 	"devDependencies": {
-		"@capacitor/cli": "^3.3.4"
+		"@capacitor/cli": "^3.3.4",
+		"webpack": "^5.66.0",
+		"webpack-cli": "^4.9.1"
 	}
 }
