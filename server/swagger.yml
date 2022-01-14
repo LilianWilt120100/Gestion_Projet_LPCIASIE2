@@ -3,6 +3,7 @@ info:
   title: Time2Bee API
   version: "1.0"
 servers:
+  - url: http://localhost:3000
   - url: https://oxypomme.fr/time2bee
 components:
   schemas:
@@ -118,7 +119,7 @@ paths:
   /plants/{id}:
     parameters:
       - name: id
-        in: query
+        in: path
         description: id of the plant
         required: true
         schema:
@@ -182,22 +183,21 @@ paths:
   /plants/{id}/qrcode:
     parameters:
       - name: id
-        in: query
+        in: path
         description: id of the plant
         required: true
         schema:
           type: string
     get:
-      description: Get informations about a plant
+      description: Get QRCode of a plant
       responses:
         "200":
-          description: Returns the details of a plant.
+          description: The QRCode
           content:
-            "application/json":
+            "image/png":
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/DetailledPlant"
+                type: string
+                format: binary
         "404":
           description: No plant have the given `id`
           content:
