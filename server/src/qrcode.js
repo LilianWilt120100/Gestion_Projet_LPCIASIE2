@@ -3,18 +3,15 @@ const QRCode = require("qrcode");
 /**
  * Generate a QR Code. Used for tests, is generate random values
  *
- * @param {string} name The plant's name
+ * @param {object} plant The plant
  * @returns The promise of QR generation
  */
-exports.generateQR = (name) => {
+exports.generateQR = ({ id }) => {
 	const data = {
 		application: "time2bee",
 		payload: {
-			id: Math.round(Math.random() * 100000),
-			plant: true,
-			name,
-			pollen: Math.round(Math.random() * 100),
-			nectar: Math.round(Math.random() * 100),
+			id,
+			creationDate: new Date(),
 		},
 	};
 
