@@ -72,3 +72,7 @@ node_modules/
 
 # DB Data
 server/data.json
+
+# Generated filees
+app/www/*
+!app/www/index.html

@@ -8,7 +8,20 @@ const startScan = async () => {
 	}
 };
 
-const askUser = () => {
+const checkPermission = async () => {
+	// check or request permission
+	const status = await BarcodeScanner.checkPermission({ force: true });
+
+	if (status.granted) {
+		// the user granted permission
+		return true;
+	}
+
+	return false;
+};
+
+const askUser = async () => {
+	await checkPermission();
 	const c = confirm("Do you want to scan a barcode?");
 
 	if (c) {

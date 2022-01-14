@@ -4,8 +4,8 @@
 	"description": "",
 	"scripts": {
 		"build": "webpack",
-		"start:ios": "cap run ios",
-		"start:android": "cap run android"
+		"start:ios": "npm run build && cap run ios",
+		"start:android": "npm run build && cap run android"
 	},
 	"author": "",
 	"license": "ISC",
