@@ -7,11 +7,8 @@ const router = Router();
 
 /**
  * @api {get} /plants Request all plants in DB
- * @apiName GetAllPlant
- * @apiGroup Plants
- * @apiDescription List all plants
  *
- * @apiSuccess {array} result The list
+ * @apiSuccess {array} The list
  */
 router.get("/", (req, res) => {
 	try {
@@ -32,11 +29,8 @@ router.get("/", (req, res) => {
 
 /**
  * @api {post} /plants Add a new plant
- * @apiName NewPlant
- * @apiGroup Plants
- * @apiDescription Add a new plant
  *
- * @apiSuccess {object} result The new plant
+ * @apiSuccess {object} The new plant
  */
 router.post("/", async (req, res) => {
 	try {
@@ -77,11 +71,8 @@ router.post("/", async (req, res) => {
 
 /**
  * @api {get} /plants/:plant Request plant informations
- * @apiName GetPlant
- * @apiGroup Plants
- * @apiDescription Get the infos of a plant.
  *
- * @apiSuccess {object} result The plant
+ * @apiSuccess {object} The plant
  */
 router.get("/:plantId", async (req, res) => {
 	try {
@@ -105,11 +96,8 @@ router.get("/:plantId", async (req, res) => {
 
 /**
  * @api {put} /plants/:plant Edit plant informations
- * @apiName EditPlant
- * @apiGroup Plants
- * @apiDescription Edit the infos of a plant. Add it if doesn't exist.
  *
- * @apiSuccess {object} result The plant
+ * @apiSuccess {object} The plant
  */
 router.put("/:plantId", async (req, res) => {
 	try {
@@ -138,8 +126,8 @@ router.put("/:plantId", async (req, res) => {
 				await db.get("plants").splice(index, 1, plant).write();
 				res.json(plant);
 			} else {
-				res.status(404).json({
-					status: 404,
+				res.status(409).json({
+					status: 409,
 					message: "Plant with same name or latin_name already exist",
 				});
 			}
@@ -158,12 +146,9 @@ router.put("/:plantId", async (req, res) => {
 });
 
 /**
- * @api {get} /plants/:plant/qrcode Request QRCode of a plant
- * @apiName GetQRPlant
- * @apiGroup Plants
- * @apiDescription Get the QRCode of a plant. For now it's randomly generated and except a name
+ * @api {get} /plants/:plant/qrcode Get the QRCode of a plant.
  *
- * @apiSuccess {image/png} result The QRCode
+ * @apiSuccess {image/png} The QRCode
  */
 router.get("/:plantId/qrcode", async (req, res) => {
 	try {
