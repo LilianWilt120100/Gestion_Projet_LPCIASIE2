@@ -75,4 +75,5 @@ server/data.json
 
 # Generated filees
 app/www/*
-!app/www/index.html
+!app/www/**/*.html
+!app/www/**/*.css
