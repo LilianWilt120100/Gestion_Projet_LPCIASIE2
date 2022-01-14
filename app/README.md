@@ -9,6 +9,8 @@ npm run start:android # Nécéssite Android Studio
 npm run start:ios # Nécéssite XCode
 ```
 
+Les chemins partent de `www/`
+
 ## Deployement
 
 ```sh
