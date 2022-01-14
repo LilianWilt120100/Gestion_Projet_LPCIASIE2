@@ -1,19 +1,15 @@
 const QRCode = require("qrcode");
 
 /**
- * Generate a QR Code. Used for tests, is generate random values
+ * Generate a QR Code.
  *
- * @param {object} plant The plant
+ * @param {object} payload The payload
  * @returns The promise of QR generation
  */
-exports.generateQR = ({ id }) => {
-	const data = {
-		application: "time2bee",
-		payload: {
-			id,
-			creationDate: new Date(),
-		},
-	};
-
-	return QRCode.toDataURL(JSON.stringify(data));
-};
+exports.generateQR = (payload) =>
+	QRCode.toDataURL(
+		JSON.stringify({
+			application: "time2bee",
+			payload,
+		})
+	);

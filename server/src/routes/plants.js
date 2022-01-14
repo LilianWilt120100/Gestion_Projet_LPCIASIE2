@@ -170,7 +170,10 @@ router.get("/:plantId/qrcode", async (req, res) => {
 		const { plantId } = req.params;
 		const plant = [...db.get("plants")].find(({ id }) => plantId === id);
 		if (plant) {
-			const base64 = await generateQR(plant);
+			const base64 = await generateQR({
+				id: plant.id,
+				creationDate: new Date(),
+			});
 			// Encoding base64 into Buffer
 			const qrcode = Buffer.from(
 				// Removing base64 descriptor
