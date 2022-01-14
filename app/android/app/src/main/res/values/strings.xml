@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">time2bee</string>
+    <string name="title_activity_main">time2bee</string>
+    <string name="package_name">fr.univlorraine.ciasielp2.time2bee</string>
+    <string name="custom_url_scheme">fr.univlorraine.ciasielp2.time2bee</string>
+</resources>

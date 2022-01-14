@@ -6,7 +6,9 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@capacitor/core": "^3.3.4"
+		"@capacitor/android": "^3.3.4",
+		"@capacitor/core": "^3.3.4",
+		"@capacitor/ios": "^3.3.4"
 	},
 	"devDependencies": {
 		"@capacitor/cli": "^3.3.4"
