@@ -70,9 +70,6 @@ local.properties
 #.project
 node_modules/
 
-# DB Data
-server/data.json
-
 # Generated filees
 app/www/*
 !app/www/**/*.html
