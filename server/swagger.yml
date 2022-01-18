@@ -22,6 +22,26 @@ components:
           type: array
           items:
             type: string
+        colors:
+          type: array
+          items:
+            type: object
+            properties:
+              hex:
+                type: string
+              french:
+                type: string
+        flowering:
+          type: array
+          items:
+            type: integer
+        garden_spot:
+          type: string
+        height:
+          type: number
+          format: float
+        honeydrew:
+          type: boolean
         pollen:
           type: integer
           format: int32

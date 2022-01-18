@@ -56,19 +56,43 @@ type Plant = {
 	/**
 	 * Description of the plant
 	 */
-	description: string;
+	description?: string;
 	/**
 	 * URLs of images
 	 */
-	images: string[];
+	images?: string[];
+	/**
+	 * Possible colors of plant
+	 */
+	colors?: {
+		hex: string;
+		french: string;
+	}[];
+	/**
+	 * Month index of flowering.
+	 * JS-like, so index start at 0
+	 */
+	flowering: number[];
+	/**
+	 * Spot of the plant in garden
+	 */
+	garden_spot?: string;
+	/**
+	 * Height of the plant in meters.
+	 */
+	height?: number;
+	/**
+	 * See `miellat` definition...
+	 */
+	honeydrew?: boolean;
 	/**
 	 * Amount of "pollen" collected wheen scanning the plant
 	 */
-	pollen: number;
+	pollen?: number;
 	/**
 	 * Amount of "nectar" collected when scanning the plant
 	 */
-	nectar: number;
+	nectar?: number;
 	/**
 	 * Creation date of the plant (in DB)
 	 */
