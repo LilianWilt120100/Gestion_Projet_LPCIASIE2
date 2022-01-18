@@ -34,7 +34,19 @@ router.get("/", (req, res) => {
  */
 router.post("/", async (req, res) => {
 	try {
-		const { name, latin_name, description, images, pollen, nectar } = req.body;
+		const {
+			name,
+			latin_name,
+			description,
+			images,
+			pollen,
+			nectar,
+			flowering,
+			colors,
+			garden_spot,
+			honeydrew,
+			height,
+		} = req.body;
 		// Check duplicates
 		if (
 			[...db.get("plants")].find(
@@ -55,6 +67,11 @@ router.post("/", async (req, res) => {
 				images,
 				pollen,
 				nectar,
+				flowering,
+				colors,
+				garden_spot,
+				honeydrew,
+				height,
 				creationDate: new Date(),
 				editedDate: new Date(),
 			};
@@ -102,7 +119,19 @@ router.get("/:plantId", async (req, res) => {
 router.put("/:plantId", async (req, res) => {
 	try {
 		const { plantId } = req.params;
-		const { name, latin_name, description, images, pollen, nectar } = req.body;
+		const {
+			name,
+			latin_name,
+			description,
+			images,
+			pollen,
+			nectar,
+			flowering,
+			colors,
+			garden_spot,
+			honeydrew,
+			height,
+		} = req.body;
 		// Check if exist
 		const plants = [...db.get("plants")];
 		const index = plants.findIndex(({ id }) => id === plantId);
@@ -120,6 +149,11 @@ router.put("/:plantId", async (req, res) => {
 					images,
 					pollen,
 					nectar,
+					flowering,
+					colors,
+					garden_spot,
+					honeydrew,
+					height,
 					creationDate: plants[index].creationDate,
 					editedDate: new Date(),
 				};
