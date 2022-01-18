@@ -1,566 +1,854 @@
 {
   "plants": [
     {
-      "id": 1,
-      "name": "érable champêtre",
-      "latin_name": "Acer campestris",
-      "height": "15m",
-      "nectar": 3,
-      "pollen": 2,
-      "honeydrew": "M",
-      "flowering": "avril, mai",
-      "colors": "vert clair",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "8bc34a",
+          "french": "vert clair"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        3,
+        4
+      ],
+      "garden_spot": "Collection historique",
+      "height": 15,
+      "honeydrew": true,
+      "id": "90732957-8927-41ef-8466-79863a974035",
+      "images": [
         "Acer_campestre.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Acer campestris",
+      "name": "Érable champêtre",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 2,
-      "name": "érable sycomore",
-      "latin_name": "Acer pseudoplatanus",
-      "height": "25m",
-      "nectar": 2,
-      "pollen": 2,
-      "flowering": "mai",
-      "colors": "jaunâtre",
-      "garden_spot": "forêt",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "e58e26",
+          "french": "jaunâtre"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        4
+      ],
+      "garden_spot": "Forêt",
+      "height": 25,
+      "id": "59464a94-245b-4c35-8917-6057a2021088",
+      "images": [
         "Acer_pseudoplatanus.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Acer pseudoplatanus",
+      "name": "Érable sycomore",
+      "nectar": 2,
+      "pollen": 2
     },
     {
-      "id": 3,
-      "name": "aulne glutineux",
-      "latin_name": "Alnus glutinosa",
-      "height": "25m",
-      "nectar": 1,
-      "pollen": 2,
-      "honeydrew": "M",
-      "flowering": "mars, avril",
-      "colors": "jaune",
-      "garden_spot": "étang",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        2,
+        3
+      ],
+      "garden_spot": "Étang",
+      "height": 25,
+      "honeydrew": true,
+      "id": "3d8e6505-c2f3-43cf-8735-79c0ee0ec20a",
+      "images": [
         "Alnus_glutinosa.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Alnus glutinosa",
+      "name": "Aulne glutineux",
+      "nectar": 1,
+      "pollen": 2
     },
     {
-      "id": 4,
-      "name": "ancolie",
-      "latin_name": "Aquilegia vulgaris",
-      "height": "0.50m",
-      "nectar": 2,
-      "pollen": 3,
-      "flowering": "mai, juin",
-      "colors": "bleu",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "2196f3",
+          "french": "bleu"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        4,
+        5
+      ],
+      "garden_spot": "Collection historique",
+      "height": 0.5,
+      "id": "d9ed0b70-4a9d-4a78-b3d6-7bff6c90cfa0",
+      "images": [
         "Aquilegia_vulgaris.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Aquilegia vulgaris",
+      "name": "Ancolie",
+      "nectar": 2,
+      "pollen": 3
     },
     {
-      "id": 5,
-      "name": "herbe à la ouate",
-      "latin_name": "Asclépias syriaca ",
-      "height": "1.50m",
+      "colors": [
+        {
+          "hex": "d05ce3",
+          "french": "mauve"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
+      "garden_spot": "Collection ornementale",
+      "height": 1.5,
+      "id": "f232459e-177b-4d91-a7a8-1fd5f4517235",
+      "latin_name": "Asclépias syriaca",
+      "name": "Herbe à la ouate",
       "nectar": 3,
-      "pollen": 1,
-      "flowering": "juin, juillet, août",
-      "colors": "mauve",
-      "garden_spot": "collection ornementale",
-      "Photos": [],
-      "creationDate": "",
-      "editedDate":""
+      "pollen": 1
     },
     {
-      "id": 6,
-      "name": "épine vinette",
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6
+      ],
+      "garden_spot": "Secteur arboretum Chine",
+      "height": 2,
+      "id": "6c52a0d7-3bc5-4467-b3fe-41b1cb2caf47",
       "latin_name": "Berberis vulgaris",
-      "height": "2m",
+      "name": "Épine vinette",
       "nectar": 2,
-      "pollen": 1,
-      "flowering": "juin, juillet",
-      "colors": "jaune",
-      "garden_spot": "secteur arboretum Chine",
-      "Photos": [],
-      "creationDate": "",
-      "editedDate":""
+      "pollen": 1
     },
     {
-      "id": 7,
-      "name": "bourrache officinalis ",
+      "colors": [
+        {
+          "hex": "6ec6ff",
+          "french": "bleu tendre"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
+      "garden_spot": "Collection historique",
+      "height": 0.5,
+      "id": "e57e3f36-899a-4f20-9d5b-116b50b18427",
       "latin_name": "Borago officinalis",
-      "height": "0.5m",
+      "name": "Bourrache officinalis",
       "nectar": 3,
-      "pollen": 2,
-      "flowering": "juin, juillet, août ",
-      "colors": "bleu tendre",
-      "garden_spot": "collection historique",
-      "Photos": [],
-      "creationDate": "",
-      "editedDate":""
+      "pollen": 2
     },
     {
-      "id": 8,
-      "name": "moutarde des champs",
-      "latin_name": "brassica arvensis ",
-      "height": " 0.6 m",
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
+      "garden_spot": "Collection historique",
+      "height": 0.6,
+      "id": "a7d388b5-ceff-4fb4-8936-476dbfc8721b",
+      "latin_name": "Brassica arvensis",
+      "name": "Moutarde des champs",
       "nectar": 3,
-      "pollen": 1,
-      "flowering": "juin, juillet, août",
-      "colors": "jaune",
-      "garden_spot": "collection historique",
-      "Photos": [],
-      "creationDate": "",
-      "editedDate":""
+      "pollen": 1
     },
     {
-      "id": 9,
-      "name": "bruyère commune callune",
-      "latin_name": "Calluna vulgaris",
-      "height": "0.30m",
-      "nectar": 2,
-      "pollen": 1,
-      "flowering": "août, blanc",
-      "colors": "rose",
-      "garden_spot": "secteur terre de bruyère",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "6ec6ff",
+          "french": "rose"
+        },
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        7
+      ],
+      "garden_spot": "Secteur terre de bruyère",
+      "height": 0.3,
+      "id": "2792747d-8b09-43d8-a407-d131706fe578",
+      "images": [
         "Calluna_vulgaris.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Calluna vulgaris",
+      "name": "Bruyère commune callune",
+      "nectar": 2,
+      "pollen": 1
     },
     {
-      "id": 10,
-      "name": "noisetier de Bysance",
-      "latin_name": "Corylus colurna",
-      "height": "12.5m",
-      "nectar": 0,
-      "pollen": 1,
-      "flowering": "février, mars",
-      "colors": "jaune",
-      "garden_spot": "secteur arboretum Europe",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        1,
+        2
+      ],
+      "garden_spot": "Secteur arboretum Europe",
+      "height": 12.5,
+      "id": "d67756f1-0198-4e0e-8b02-a2a523f38470",
+      "images": [
         "corylus_colurna.jpg",
         "Corylus_fleur.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Corylus colurna",
+      "name": "Noisetier de Bysance",
+      "pollen": 1
     },
     {
-      "id": 11,
-      "name": "cotoneaster ",
-      "latin_name": "Cotoneaster horizontalis",
-      "height": "2,3m",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "juin, juillet",
-      "colors": "rose",
-      "garden_spot": "arboretum,secteur chine",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "6ec6ff",
+          "french": "rose"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6
+      ],
+      "garden_spot": "Arboretum,secteur chine",
+      "height": 2,
+      "id": "68922e46-e91d-4204-914c-087b14fed678",
+      "images": [
         "cotoneaster_horizontalis.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Cotoneaster horizontalis",
+      "name": "Cotoneaster",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 12,
-      "name": "crocus de printemps",
-      "latin_name": "Crocus vernus ",
-      "nectar": 1,
-      "pollen": 2,
-      "flowering": "février, mars",
-      "colors": "toutes couleurs",
-      "garden_spot": "pelouses",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "000000",
+          "french": "toutes couleurs"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        1,
+        2
+      ],
+      "garden_spot": "Pelouses",
+      "id": "50405534-aabc-4234-afff-c39c5c2121c2",
+      "images": [
         "crocus_vernus.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Crocus vernus",
+      "name": "Crocus de printemps",
+      "nectar": 1,
+      "pollen": 2
     },
     {
-      "id": 13,
-      "name": "dalhia CV",
-      "latin_name": "Dalhia variabilis",
-      "height": "2m",
-      "nectar": 0,
-      "pollen": 2,
-      "flowering": "juillet, août, septembre",
-      "colors": "toutes couleurs",
-      "garden_spot": "collection de dahlias",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "000000",
+          "french": "toutes couleurs"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        6,
+        7,
+        8
+      ],
+      "garden_spot": "Collection de dahlias",
+      "height": 2,
+      "id": "7ef7a236-6bb7-41b3-bce4-cb369aa74bd8",
+      "images": [
         "Dalhia_variabilis.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Dalhia variabilis",
+      "name": "Dalhia CV",
+      "pollen": 2
     },
     {
-      "id": 14,
-      "name": "epilobe en épis",
-      "latin_name": "Epilobium angustifolium",
-      "height": "2m",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "juillet, août",
-      "colors": "rose",
-      "garden_spot": "ruisseau",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "6ec6ff",
+          "french": "rose"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        6,
+        7
+      ],
+      "garden_spot": "Ruisseau",
+      "height": 2,
+      "id": "0f4f1b2f-1a5a-4b44-9084-350a347ee035",
+      "images": [
         "epilobium_angustifolium.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Epilobium angustifolium",
+      "name": "Epilobe en épis",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 15,
-      "name": "sarrasin ou blé noir",
-      "latin_name": "Fagopyrum esculentum",
-      "height": "1m",
-      "nectar": 2,
-      "pollen": 1,
-      "flowering": "juin, juillet, août",
-      "colors": "blanc",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
+      "garden_spot": "Collection historique",
+      "height": 1,
+      "id": "c3ec3341-653b-4733-9a1a-c176b1bd9fda",
+      "images": [
         "Fagopyrum_esculentum.jpeg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Fagopyrum esculentum",
+      "name": "Sarrasin ou blé noir",
+      "nectar": 2,
+      "pollen": 1
     },
     {
-      "id": 16,
-      "name": "frêne à fleurs",
-      "latin_name": "Fraxinus ornus",
-      "height": "10m",
-      "nectar": 1,
-      "pollen": 2,
-      "flowering": "mai, juin",
-      "colors": "blanche",
-      "garden_spot": "secteur arboretum Europe",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        4,
+        5
+      ],
+      "garden_spot": "Secteur arboretum Europe",
+      "height": 10,
+      "id": "ff8014f0-be27-4a55-8686-f3a450a9865d",
+      "images": [
         "Fraxinus_ornus.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Fraxinus ornus",
+      "name": "Frêne à fleurs",
+      "nectar": 1,
+      "pollen": 2
     },
     {
-      "id": 17,
-      "name": "févier",
-      "latin_name": "Gleditsia triacanthos",
-      "height": "20m",
-      "nectar": 2,
-      "pollen": 0,
-      "flowering": "juin, juillet",
-      "colors": "jaune, verte",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        },
+        {
+          "hex": "4caf50",
+          "french": "vert"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6
+      ],
+      "height": 20,
+      "id": "df128f2f-fd0c-43e3-bfb6-e20ee5a6a7a0",
+      "images": [
         "gleditsia_triacanthos.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Gleditsia triacanthos",
+      "name": "Févier",
+      "nectar": 2
     },
     {
-      "id": 18,
-      "name": "lierre",
-      "latin_name": "Hedera helix",
-      "height": "rampant",
-      "nectar": 3,
-      "pollen": 3,
-      "flowering": "septembre, octobre",
-      "garden_spot": "vert tendre,forêt",
-      "Photos": [
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        8,
+        9
+      ],
+      "garden_spot": "Vert tendre,forêt",
+      "id": "2faf85c6-8c8b-4aae-905f-762b7f417424",
+      "images": [
         "Hedera_helix.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Hedera helix",
+      "name": "Lierre",
+      "nectar": 3,
+      "pollen": 3
     },
     {
-      "id": 19,
-      "latin_name": "Lavandula officinale",
-      "nectar": 3,
-      "pollen": 1,
-      "flowering": "juillet, août",
-      "colors": "bleu lilas",
-      "garden_spot": "potager",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "b3e5fc",
+          "french": "bleu lilas"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        6,
+        7
+      ],
+      "garden_spot": "Potager",
+      "id": "3df65e5e-424b-4f72-af29-cf80d6858c63",
+      "images": [
         "lavande_officinale.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Lavandula officinale",
+      "name": "Lavande vraie",
+      "nectar": 3,
+      "pollen": 1
     },
     {
-      "id": 20,
-      "name": "chèvrefeuille",
-      "latin_name": "Lonicera tartarica",
-      "height": "3m",
-      "nectar": 2,
-      "pollen": 2,
-      "flowering": "mai, juin",
-      "colors": "blanc",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        4,
+        5
+      ],
+      "garden_spot": "Collection historique",
+      "height": 3,
+      "id": "b3a0d1cf-bf89-4d22-a5cb-b068a79d271f",
+      "images": [
         "lonicera_tartarica.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Lonicera tartarica",
+      "name": "Chèvrefeuille",
+      "nectar": 2,
+      "pollen": 2
     },
     {
-      "id": 21,
-      "name": "luzerne cultivée",
-      "latin_name": "Médicago sativa",
-      "height": "0.50m",
-      "nectar": 3,
-      "pollen": 1,
-      "flowering": "juin, juillet, août",
-      "colors": "mauve",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "d05ce3",
+          "french": "mauve"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
+      "garden_spot": "Collection historique",
+      "height": 0.5,
+      "id": "556a26d7-bb24-4ee9-a4c7-41ba3e96f854",
+      "images": [
         "Medicago_sativa.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Médicago sativa",
+      "name": "Luzerne cultivée",
+      "nectar": 3,
+      "pollen": 1
     },
     {
-      "id": 22,
-      "name": "phacelie à feuilles de tanaisie",
-      "latin_name": "Phacelia tanacetifolia ",
-      "height": "0.50m",
-      "pollen": "3      2",
-      "flowering": "juillet, août, septembre",
-      "colors": "bleu clair",
-      "garden_spot": "potager écologique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "03a9f4",
+          "french": "bleu clair"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        6,
+        7,
+        8
+      ],
+      "garden_spot": "Potager écologique",
+      "height": 0.5,
+      "id": "cc44daf4-ff0b-4eef-9139-dfbf1dc3e25f",
+      "images": [
         "Phacelia_tanacetifolia.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Phacelia tanacetifolia",
+      "name": "Phacelie à feuilles de tanaisie",
+      "pollen": 3
     },
     {
-      "id": 23,
-      "name": "merisier",
-      "latin_name": "Prunus avium",
-      "height": "13m",
-      "nectar": 2,
-      "pollen": 3,
-      "honeydrew": "M",
-      "flowering": "avril, mai",
-      "colors": "blanche",
-      "garden_spot": "forêt",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        3,
+        4
+      ],
+      "garden_spot": "Forêt",
+      "height": 13,
+      "honeydrew": true,
+      "id": "f7532f9b-b88b-41c5-9a5e-8f687166b727",
+      "images": [
         "Prunus_avium.jpeg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Prunus avium",
+      "name": "Merisier",
+      "nectar": 2,
+      "pollen": 3
     },
     {
-      "id": 24,
-      "name": "prunellier",
-      "latin_name": "Prunus spinosa",
-      "height": "3.4m",
-      "nectar": 2,
-      "pollen": 2,
-      "flowering": "avril, mai",
-      "colors": "blanc",
-      "garden_spot": "roseraie",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        3,
+        4
+      ],
+      "garden_spot": "Roseraie",
+      "height": 3.4,
+      "id": "3b2261d4-50e1-4ad5-ba10-cc661d23a3c6",
+      "images": [
         "Prunus_spinosa.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Prunus spinosa",
+      "name": "Prunellier",
+      "nectar": 2,
+      "pollen": 2
     },
     {
-      "id": 25,
-      "name": "buisson ardent",
-      "latin_name": "Pyracantha coccinéa",
-      "height": "23m",
-      "nectar": 2,
-      "pollen": 3,
-      "flowering": ",juin, juillet",
-      "colors": "blanc",
-      "garden_spot": "roseraie",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6
+      ],
+      "garden_spot": "Roseraie",
+      "height": 23,
+      "id": "a3b1eca2-a8b2-4d8c-9006-d0bdb9157a94",
+      "images": [
         "Pyracantha_coccinea.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Pyracantha coccinéa",
+      "name": "Buisson ardent",
+      "nectar": 2,
+      "pollen": 3
     },
     {
-      "id": 26,
-      "name": "robinier faux acacia ",
-      "latin_name": "Robinia pseudoacacia",
-      "height": "20m",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "juin",
-      "colors": "blanche",
-      "garden_spot": "étang pavillon d'accueil",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffffff",
+          "french": "blanc"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5
+      ],
+      "garden_spot": "Étang pavillon d'accueil",
+      "height": 20,
+      "id": "229b923a-cf88-455f-939f-a404e29739b4",
+      "images": [
         "Robinia_pseudoacacia.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Robinia pseudoacacia",
+      "name": "Robinier faux acacia",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 27,
-      "name": "rudbeckia lacinié",
-      "latin_name": "Rudbeckia laciniata  ",
-      "height": "1.50m",
-      "nectar": 0,
-      "pollen": 3,
-      "flowering": "juillet, août",
-      "colors": "jaune",
-      "garden_spot": "collection historique ornementale",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        6,
+        7
+      ],
+      "garden_spot": "Collection historique ornementale",
+      "height": 1.5,
+      "id": "d807b72e-66ae-4e8c-a034-f2618b82d688",
+      "images": [
         "Rudbeckia_laciniata.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Rudbeckia laciniata",
+      "name": "Rudbeckia lacinié",
+      "pollen": 3
     },
     {
-      "id": 28,
-      "name": "saule marsault",
-      "latin_name": "Salix capréa",
-      "nectar": 2,
-      "pollen": 3,
-      "flowering": "mars, avril",
-      "colors": "jaune, vert",
-      "garden_spot": "ruisseau",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        },
+        {
+          "hex": "4caf50",
+          "french": "vert"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        2,
+        3
+      ],
+      "garden_spot": "Ruisseau",
+      "id": "039eb786-a535-4c98-b0b7-fa807a35ee6f",
+      "images": [
         "salix_caprea.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Salix capréa",
+      "name": "Saule marsault",
+      "nectar": 2,
+      "pollen": 3
     },
     {
-      "id": 29,
-      "name": " verge d'or",
-      "latin_name": "Solidago virgaurea",
-      "height": "1.50m ",
-      "nectar": 2,
-      "pollen": 2,
-      "flowering": "août, septembre, octobre",
-      "colors": "jaune",
-      "garden_spot": "collection historique",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        7,
+        8,
+        9
+      ],
+      "garden_spot": "Collection historique",
+      "height": 1.5,
+      "id": "11c978a2-da39-4f2d-a90a-f84dd01fef84",
+      "images": [
         "Solidago_virgaurea.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Solidago virgaurea",
+      "name": "Verge d'or",
+      "nectar": 2,
+      "pollen": 2
     },
     {
-      "id": 30,
-      "name": "sophora du japon",
-      "latin_name": "Sophora japonica",
-      "height": "15 20m",
-      "nectar": 3,
-      "pollen": 1,
-      "flowering": "août, septembre",
-      "colors": "blanc crème",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "fffdd0",
+          "french": "blanc crème"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        7,
+        8
+      ],
+      "height": 15,
+      "id": "e042d88d-e2ca-46da-875c-37f7354282cd",
+      "images": [
         "sophora_japonica.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Sophora japonica",
+      "name": "Sophora du japon",
+      "nectar": 3,
+      "pollen": 1
     },
     {
-      "id": 31,
-      "name": "pissenlit",
-      "latin_name": "Taraxacum officinalis",
-      "nectar": 3,
-      "pollen": 3,
-      "flowering": "avril, mai, juin, juillet",
-      "colors": "jaune",
-      "garden_spot": "pelouse prairie",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "ffeb3b",
+          "french": "jaune"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "garden_spot": "Pelouse prairie",
+      "id": "07bbfbe6-a1d6-4619-8eab-f562c90deefc",
+      "images": [
         "taraxacum_officinale.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Taraxacum officinalis",
+      "name": "Pissenlit",
+      "nectar": 3,
+      "pollen": 3
     },
     {
-      "id": 32,
-      "name": "thym",
-      "latin_name": "Thymus vulgaris",
-      "height": "0.20m",
-      "nectar": 3,
-      "pollen": 0,
-      "flowering": "juin, juillet, août",
-      "colors": "mauve",
+      "colors": [
+        {
+          "hex": "d05ce3",
+          "french": "mauve"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5,
+        6,
+        7
+      ],
       "garden_spot": " jardin écologique,potager",
-      "Photos": [
+      "height": 0.2,
+      "id": "8d06b9eb-35ff-46c3-9416-430ad664b500",
+      "images": [
         "thymus_vulgaris.JPG"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Thymus vulgaris",
+      "name": "Thym",
+      "nectar": 3
     },
     {
-      "id": 33,
-      "name": "tilleul de Henry",
-      "latin_name": "Tilia henryana",
-      "height": "12m",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "septembre",
-      "colors": "jaunâtre",
-      "garden_spot": "étang pavillon d'accueil",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "e58e26",
+          "french": "jaunâtre"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        8
+      ],
+      "garden_spot": "Étang pavillon d'accueil",
+      "height": 12,
+      "id": "e1d26252-d47a-492d-bc78-a958e73cfca3",
+      "images": [
         "Tilia_henryana.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Tilia henryana",
+      "name": "Tilleul de Henry",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 34,
-      "name": "tilleul à larges feuilles",
-      "latin_name": "Tilia platyphillos",
-      "height": "20m",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "juin",
-      "colors": "jaunâtre",
-      "garden_spot": "parcelle Emile Gallé",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "e58e26",
+          "french": "jaunâtre"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        5
+      ],
+      "garden_spot": "Parcelle Emile Gallé",
+      "height": 20,
+      "id": "4a2edbfc-af67-48e4-82fc-aaa9d0d9b713",
+      "images": [
         "Tilia_platyphyllos.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Tilia platyphillos",
+      "name": "Tilleul à larges feuilles",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 35,
-      "name": " trèfle blanc",
-      "latin_name": "Trifolium repens",
-      "nectar": 3,
-      "pollen": 2,
-      "flowering": "mai, juin, juillet, août, septembre",
-      "colors": "",
-      "garden_spot": "pelouse",
-      "Photos": [
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "garden_spot": "Pelouse",
+      "id": "e12ea5f0-fc74-460b-b9dd-58a03bf71c06",
+      "images": [
         "trifolium_repens.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Trifolium repens",
+      "name": "Trèfle blanc",
+      "nectar": 3,
+      "pollen": 2
     },
     {
-      "id": 36,
-      "name": "petite pervenche",
-      "latin_name": "Vinca minor",
-      "height": "0.30m",
-      "nectar": 2,
-      "pollen": 0,
-      "flowering": "mars, avril",
-      "colors": "bleu",
-      "garden_spot": "arboretum",
-      "Photos": [
+      "colors": [
+        {
+          "hex": "2196f3",
+          "french": "bleu"
+        }
+      ],
+      "creationDate": "2022-01-18T11:30:34.262Z",
+      "editedDate": "2022-01-18T11:30:34.262Z",
+      "flowering": [
+        2,
+        3
+      ],
+      "garden_spot": "Arboretum",
+      "height": 0.3,
+      "id": "9a881590-eaca-4b31-a554-f69852e751f3",
+      "images": [
         "Vinca_minor.jpg"
       ],
-      "creationDate": "",
-      "editedDate":""
+      "latin_name": "Vinca minor",
+      "name": "Petite pervenche",
+      "nectar": 2
     }
   ]
 }
