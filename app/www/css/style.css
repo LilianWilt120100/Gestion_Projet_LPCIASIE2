@@ -37,10 +37,22 @@ body {
 #miel {
     width: 300px;
     height: 252px;
+    margin-top: 3em;
+    margin-left: 44%;
 }
 
 #barre {
     margin-left: 0.5em;
+}
+
+#start-game-btn {
+    margin-top: 5vh;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    width: 8em;
+    height: 3em;
 }
 
 #tabScore {
