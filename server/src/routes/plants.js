@@ -117,6 +117,34 @@ router.get("/:plantId", async (req, res) => {
 });
 
 /**
+ * @api {delete} /plants/:plant Delete plant
+ *
+ * @apiSuccess {empty} Nothing
+ */
+router.delete("/:plantId", async (req, res) => {
+	try {
+		const { plantId } = req.params;
+		const plants = [...db.get("plants")];
+		const index = plants.findIndex(({ id }) => plantId === id);
+		if (index >= 0) {
+			plants.splice(index, 1);
+			db.set("plants", plants).write();
+			res.json({});
+		} else {
+			res.status(404).json({
+				status: 404,
+				message: "Plant not found",
+			});
+		}
+	} catch (error) {
+		res.status(500).json({
+			status: 500,
+			message: error,
+		});
+	}
+});
+
+/**
  * @api {put} /plants/:plant Edit plant informations
  *
  * @apiSuccess {object} The plant

@@ -171,6 +171,25 @@ paths:
             "application/json":
               schema:
                 $ref: "#/components/schemas/Error"
+    delete:
+      description: Delete informations about a plant
+      tags:
+        - Plant
+      responses:
+        "200":
+          description: The deletion is successful.
+        "404":
+          description: No plant have the given `id`
+          content:
+            "application/json":
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: An error occured when fetching plants.
+          content:
+            "application/json":
+              schema:
+                $ref: "#/components/schemas/Error"
     put:
       description: Edit a plant
       tags:
