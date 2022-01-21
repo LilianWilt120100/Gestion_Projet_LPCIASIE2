@@ -1,4 +1,5 @@
 import { BarcodeScanner } from "@capacitor-community/barcode-scanner";
+import { getPlant } from "./plant";
 
 /**
  * Ouvre la camera et scan le QR-code
@@ -7,7 +8,19 @@ const startScan = async () => {
 	BarcodeScanner.hideBackground();
 	const result = await BarcodeScanner.startScan();
 	if (result.hasContent) {
-		console.log(result.content);
+		const { application, payload } = result.content;
+
+		if (application === "time2bee") {
+			if (payload.type === "plant") {
+				const plant = await getPlant(payload.id);
+				console.log(plant);
+				// TODO
+			}
+		} else {
+			throw "Le QRcode scanné n'est pas valide";
+		}
+	} else {
+		throw "Une erreur est survenue lors du scan du QRcode";
 	}
 };
 

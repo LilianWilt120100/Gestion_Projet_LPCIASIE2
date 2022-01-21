@@ -24,6 +24,10 @@ type QRPayload = QRPlant;
  */
 type QRPlant = {
 	/**
+	 * Type of the QRCode
+	 */
+	type: "plant";
+	/**
 	 * UID of the plant. Must match with onee in DB.
 	 */
 	id: string;

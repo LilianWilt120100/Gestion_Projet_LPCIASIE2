@@ -5,11 +5,9 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use("/static", express.static("src/static"));
+app.use("/", express.static("src/static"));
 
-app.get("/", (req, res) => {
-	res.send("Hello World!");
-});
+
 
 // API DOC
 const swaggerUi = require("swagger-ui-express");
