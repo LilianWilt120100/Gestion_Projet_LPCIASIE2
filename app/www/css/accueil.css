@@ -38,6 +38,20 @@ body {
     width: 300px; 
     height: 252px; 
     position: bottom;
+    margin-left: 44%;
+    position: bottom;
+    margin-top: 8vh;
+}
+
+
+#start-game-btn{
+    margin-top: 2vh;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    width: 8em;
+    height: 3em;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
