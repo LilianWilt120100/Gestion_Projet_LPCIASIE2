@@ -10,5 +10,9 @@ const API_URL =
  * @returns Les informations détaillées de la plante
  */
 export const getPlant = async (id) => {
-	return (await fetch(`${API_URL}/plants/${id}`)).json();
+	const resp = await fetch(`${API_URL}/plants/${id}`);
+	if (resp.status == 404) {
+		throw "La plante n'existe pas ou plus";
+	}
+	return resp.json();
 };
