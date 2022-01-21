@@ -1,3 +1,8 @@
-import { askUser } from "./qrcode";
+import { startTimer } from "./timer";
 
-askUser();
+document.getElementById("start-game-btn").onclick = (e) => {
+	e.preventDefault();
+	startTimer().then(() => {
+		alert("Fin du game");
+	});
+};
