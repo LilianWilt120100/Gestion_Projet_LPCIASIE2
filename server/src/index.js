@@ -7,8 +7,6 @@ const port = 3000;
 app.use(express.json());
 app.use("/", express.static("src/static"));
 
-
-
 // API DOC
 const swaggerUi = require("swagger-ui-express");
 const swaggerDoc = require("yamljs").load("./swagger.yml");
