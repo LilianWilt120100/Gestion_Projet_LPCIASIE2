@@ -195,6 +195,7 @@ router.get("/:plantId/qrcode", async (req, res) => {
 		const plant = [...db.get("plants")].find(({ id }) => plantId === id);
 		if (plant) {
 			const base64 = await generateQR({
+				type: "plant",
 				id: plant.id,
 				creationDate: new Date(),
 			});
