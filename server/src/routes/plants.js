@@ -3,6 +3,8 @@ const { v4: uuidv4 } = require("uuid");
 const { generateQR } = require("../qrcode");
 const { db } = require("../dabatase");
 
+const IMG_LOCATION = "/img/plants/";
+
 const router = Router();
 
 /**
@@ -96,7 +98,10 @@ router.get("/:plantId", async (req, res) => {
 		const { plantId } = req.params;
 		const plant = [...db.get("plants")].find(({ id }) => plantId === id);
 		if (plant) {
-			res.json(plant);
+			res.json({
+				...plant,
+				images: plant.images.map((url) => IMG_LOCATION + url),
+			});
 		} else {
 			res.status(404).json({
 				status: 404,

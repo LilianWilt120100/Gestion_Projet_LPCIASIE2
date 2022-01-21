@@ -68,7 +68,7 @@ body {
         margin-top: 3vh;
     }
 
-    #boutonjouer{
+    #start-game-btn{
         margin-top: 5vh;
         font-size: 1.5em;
         padding-top: 0.5em;
@@ -108,7 +108,7 @@ body {
         margin-top: 3vh;
     }
 
-    #boutonjouer{
+    #start-game-btn{
         margin-top: 5vh;
         font-size: 2em;
         padding-top: 0.5em;
