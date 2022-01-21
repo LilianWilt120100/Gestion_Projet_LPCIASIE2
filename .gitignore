@@ -68,9 +68,12 @@ local.properties
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
+
+# Node Modules
 node_modules/
 
-# Generated filees
-app/www/*
-!app/www/**/*.html
-!app/www/**/*.css
+# Generated files
+app/www/**/*.js*
+
+# Useless files
+.DS_Store
