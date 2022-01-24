@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });
@@ -83,7 +83,7 @@ router.post("/", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });
@@ -100,7 +100,9 @@ router.get("/:plantId", async (req, res) => {
 		if (plant) {
 			res.json({
 				...plant,
-				images: plant.images.map((url) => IMG_LOCATION + url),
+				images: plant.images
+					? plant.images.map((url) => IMG_LOCATION + url)
+					: undefined,
 			});
 		} else {
 			res.status(404).json({
@@ -111,7 +113,7 @@ router.get("/:plantId", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });
@@ -139,7 +141,7 @@ router.delete("/:plantId", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });
@@ -207,7 +209,7 @@ router.put("/:plantId", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });
@@ -248,7 +250,7 @@ router.get("/:plantId/qrcode", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({
 			status: 500,
-			message: error,
+			message: error.message,
 		});
 	}
 });

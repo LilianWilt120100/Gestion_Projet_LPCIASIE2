@@ -15,7 +15,7 @@
 <body>
     <div id="container" class="container-fluid">
         <h1>Panneau d'administration</h1>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addModal" id="myModel">
+        <button type="button" class="btn btn-secondary" v-on:click="newPlant">
             Ajouter une plante
         </button>
 
@@ -33,181 +33,26 @@
                 <tr v-for="(plant, i) in plants" v-bind:key="i">
                     <td>{{ plant.name }}</td>
                     <td><i>{{ plant.latin_name }}</i></td>
-                    <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editModal"
-                            v-on:click="editPlant(plant.id)"><i class="las la-edit"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#deleteModal" v-on:click="deletePlant(plant.id)"><i
-                                class="las la-trash"></i></button></td>
+                    <td>
+                        <button type="button" class="btn btn-success" v-on:click="editPlant(plant.id)">
+                            <i class="las la-edit"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" v-on:click="deletePlant(i)">
+                            <i class="las la-trash"></i>
+                        </button>
+                    </td>
                 </tr>
 
             </tbody>
         </table>
+
+        <!-- Modal edit plant -->
+        <edition-modal ref="editionPopup"></edition-modal>
+        <!-- Modal delete plant -->
+        <delete-modal ref="deletionPopup"></delete-modal>
     </div>
-
-
-
-    <!-- Modal add plant -->
-    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une plante</h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <label for="basic-url" class="form-label"></label>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Créé le</span>
-                        <input type="text" class="form-control" placeholder="00/00/21" aria-label="Crée le">
-                        <span class="input-group-text">Modifé le</span>
-                        <input type="text" class="form-control" placeholder="00/00/21" aria-label="Modifié le">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nom</span>
-                        <input type="text" class="form-control" placeholder="Exemple" aria-label="Nom"
-                            aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nom latin</span>
-                        <input type="text" class="form-control" placeholder="Exemplum" aria-label="Nom latin"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Nectar</span>
-                        <input type="text" class="form-control" placeholder="5" aria-label="Nectar">
-                        <span class="input-group-text">Pollen</span>
-                        <input type="text" class="form-control" placeholder="3" aria-label="Pollen">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Emplacement</span>
-                        <input type="text" class="form-control" placeholder="Jardin" aria-label="Emplacement"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Floraison</span>
-                        <input type="text" class="form-control" placeholder="Exemplembre" aria-label="Floraison"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Hauteur</span>
-                        <input type="text" class="form-control" placeholder="3" aria-label="Hauteur">
-                        <span class="input-group-text">m</span>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Image</span>
-                        <input type="text" class="form-control" placeholder="exe_mple.png" aria-label="Image"
-                            aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-success">Enregistrer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal edit plant -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modifier une plante</h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <label for="basic-url" class="form-label"></label>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Créé le</span>
-                        <input type="text" class="form-control" placeholder="00/00/21" aria-label="Crée le">
-                        <span class="input-group-text">Modifé le</span>
-                        <input type="text" class="form-control" placeholder="00/00/21" aria-label="Modifié le">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nom</span>
-                        <input type="text" class="form-control" placeholder="Exemple" aria-label="Nom"
-                            aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nom latin</span>
-                        <input type="text" class="form-control" placeholder="Exemplum" aria-label="Nom latin"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Nectar</span>
-                        <input type="text" class="form-control" placeholder="5" aria-label="Nectar">
-                        <span class="input-group-text">Pollen</span>
-                        <input type="text" class="form-control" placeholder="3" aria-label="Pollen">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Emplacement</span>
-                        <input type="text" class="form-control" placeholder="Jardin" aria-label="Emplacement"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Floraison</span>
-                        <input type="text" class="form-control" placeholder="Exemplembre" aria-label="Floraison"
-                            aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Hauteur</span>
-                        <input type="text" class="form-control" placeholder="3" aria-label="Hauteur">
-                        <span class="input-group-text">m</span>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Image</span>
-                        <input type="text" class="form-control" placeholder="exe_mple.png" aria-label="Image"
-                            aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-success">Enregistrer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal delete plant -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Supprimer cette plante</h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Etes-vous sur de vouloir supprimer cette plante ?</p>
-                    <p>"Rappeler le nom de la plante ici"</p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
-                    <button type="button" class="btn btn-danger">Supprimer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -216,7 +61,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

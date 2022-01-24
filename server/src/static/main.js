@@ -1,27 +1,51 @@
-const API_URL = "http://localhost:3000/api/plants";
+import DeleteModal from "./components/DeleteModal.mjs";
+import EditionModal from "./components/EditionModal.mjs";
+
+export const API_URL = "/api/plants";
 
 const myVueApp = Vue.createApp({
+	components: {
+		"edition-modal": EditionModal,
+		"delete-modal": DeleteModal,
+	},
 	data() {
 		return {
 			plants: [],
-			currentPlant: undefined,
 		};
 	},
 	methods: {
-		editPlant(plantId) {
-			this.currentPlant = plantId;
+		async newPlant() {
+			this.$refs.editionPopup.mode = "creation";
+			this.$refs.editionPopup.plant = {};
+			await this.$refs.editionPopup.show();
+			this.fetchPlants();
 		},
-		async deletePlant(plantId) {
-			await fetch(API_URL + "/" / plantId, {
-				method: "DELETE",
-			});
-			const index = this.plants.findIndex((p) => p.id === plantId);
-			this.plants.splice(index, 1);
+		async editPlant(id) {
+			// TODO: loading
+			this.$refs.editionPopup.mode = "edition";
+			this.$refs.editionPopup.plant = await (
+				await fetch(API_URL + "/" + id)
+			).json();
+			await this.$refs.editionPopup.show();
+			this.fetchPlants();
+		},
+		async deletePlant(index) {
+			// TODO: loading
+			const { id, name } = this.plants[index];
+			this.$refs.deletionPopup.plant = {
+				id,
+				name,
+			};
+			await this.$refs.deletionPopup.show();
+			this.fetchPlants();
+		},
+		async fetchPlants() {
+			this.plants = await (await fetch(API_URL)).json();
 		},
 	},
 	computed: {},
-	async mounted() {
-		this.plants = await (await fetch(API_URL)).json();
+	mounted() {
+		this.fetchPlants();
 	},
 });
 
