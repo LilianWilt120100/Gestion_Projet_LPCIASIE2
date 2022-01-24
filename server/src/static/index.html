@@ -25,8 +25,7 @@
                 <tr>
                     <td>Nom</td>
                     <td><i>Nom latin</i></td>
-                    <td>Modifier</td>
-                    <td>Supprimer</td>
+                    <td>Actions</td>
                 </tr>
             </thead>
             <tbody>
@@ -34,14 +33,19 @@
                     <td>{{ plant.name }}</td>
                     <td><i>{{ plant.latin_name }}</i></td>
                     <td>
-                        <button type="button" class="btn btn-success" v-on:click="editPlant(plant.id)">
-                            <i class="las la-edit"></i>
-                        </button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-danger" v-on:click="deletePlant(i)">
-                            <i class="las la-trash"></i>
-                        </button>
+                        <div class="btn-group" role="group" aria-label="Actions">
+                            <button type="button" title="Editer" class="btn btn-success"
+                                v-on:click="editPlant(plant.id)">
+                                <i class="las la-edit"></i>
+                            </button>
+                            <button type="button" title="Supprimer" class="btn btn-danger" v-on:click="deletePlant(i)">
+                                <i class="las la-trash"></i>
+                            </button>
+                            <button type="button" title="Générer QRCode" class="btn btn-light"
+                                v-on:click="getQRPlant(plant.id)">
+                                <i class="las la-qrcode"></i>
+                            </button>
+                        </div>
                     </td>
                 </tr>
 

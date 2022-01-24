@@ -42,6 +42,9 @@ const myVueApp = Vue.createApp({
 		async fetchPlants() {
 			this.plants = await (await fetch(API_URL)).json();
 		},
+		getQRPlant(id) {
+			window.open(API_URL + "/" + id + "/qrcode", "_blank").focus();
+		},
 	},
 	computed: {},
 	mounted() {

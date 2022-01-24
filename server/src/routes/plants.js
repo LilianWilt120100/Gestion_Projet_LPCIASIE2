@@ -236,9 +236,11 @@ router.get("/:plantId/qrcode", async (req, res) => {
 				"base64"
 			);
 
+			const filename = plant.name.toLowerCase().replace(/\s/, "_");
 			res.writeHead(200, {
 				"Content-Type": "image/png",
 				"Content-Length": qrcode.length,
+				"Content-Disposition": `attachment; filename="${filename}.png"`,
 			});
 			res.end(qrcode);
 		} else {
