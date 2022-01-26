@@ -1,13 +1,11 @@
 # Time2Bee client
 
-## Developpement
+## Development
 
 ```sh
 npm i
-npm run serve
+npm run dev
 ```
-
-Les chemins partent de `www/`
 
 ## Tests
 
