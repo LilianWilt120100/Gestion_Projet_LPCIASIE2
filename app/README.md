@@ -4,16 +4,23 @@
 
 ```sh
 npm i
+npm run serve
+```
+
+Les chemins partent de `www/`
+
+## Tests
+
+```sh
+npm i
 npm run start:android # Nécéssite Android Studio
 # ou
 npm run start:ios # Nécéssite XCode
 ```
 
-Les chemins partent de `www/`
-
-## Deployement
+## Production
 
 ```sh
-npm ci --production
-...
+npm i
+npm run build
 ```
