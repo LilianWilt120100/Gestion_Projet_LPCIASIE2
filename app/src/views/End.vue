@@ -13,7 +13,7 @@
           <tr>
             <td>1000</td>
             <td>{{ scanCount }}</td>
-            <td>{{ duraton }}</td>
+            <td>{{ duration }}</td>
           </tr>
         </table>
         <br />
@@ -24,19 +24,22 @@
         />
       </div>
 
-      <a to="home" id="accueil-btn" class="square_btn">Accueil</a>
+      <router-link to="/" id="accueil-btn" class="square_btn">
+        Accueil
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import { getScanCount, getTotalDuration } from "@/js/qrcode";
+import { getScanCount } from "@/js/qrcode";
+import { getTotalDuration } from "@/js/timer";
 
 export default {
   name: "End",
   computed: {
     scanCount: getScanCount,
-    duration: () => {
+    duration() {
       const duration = getTotalDuration();
       return duration;
     },

@@ -34,7 +34,7 @@ export default {
 
       setScanCount(0);
       startTimer().then(() => {
-        alert("Fin du game");
+        this.$router.push("end");
       });
     },
   },
