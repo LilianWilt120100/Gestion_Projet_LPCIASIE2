@@ -1,25 +1,29 @@
-import { BarcodeScanner } from "@capacitor-community/barcode-scanner";
-import { getPlant } from "./plant";
+import {
+  BarcodeScanner,
+  SupportedFormat,
+} from "@capacitor-community/barcode-scanner";
 
 let scanCount = 0;
 
 /**
  * Ouvre la camera et scan le QR-code
+ *
+ * @returns The QR Plant
  */
 export const startScan = async () => {
-  BarcodeScanner.hideBackground();
-  const result = await BarcodeScanner.startScan();
+  await BarcodeScanner.hideBackground();
+  const result = await BarcodeScanner.startScan({
+    targetedFormats: [SupportedFormat.QR_CODE],
+  });
+  await BarcodeScanner.showBackground();
   if (result.hasContent) {
-    const { application, payload } = result.content;
+    const { application, payload } = JSON.parse(result.content);
 
     if (application === "time2bee") {
       if (payload.type === "plant") {
         try {
-          const plant = await getPlant(payload.id);
           scanCount++;
-          console.log(plant);
-
-          // TODO
+          return payload;
         } catch (error) {
           throw "Une erreur est survenue lors de la récupération des données";
         }
@@ -36,30 +40,37 @@ export const startScan = async () => {
 
 /**
  * Demande la permissions pour ouvrir la camera
- * @returns
+ *
+ * @returns Th permission status
  */
 export const checkPermission = async () => {
   // check or request permission
   const status = await BarcodeScanner.checkPermission({ force: true });
 
-  if (status.granted) {
-    // the user granted permission
-    return true;
+  if (status.denied) {
+    // the user denied permission for good
+    // redirect user to app settings if they want to grant it anyway
+    const c = confirm(
+      "Voulez vous ouvrir les paramètrs pour authoriser l'utilisation de l'appareil photo ?"
+    );
+    if (c) {
+      await BarcodeScanner.openAppSettings();
+    }
   }
 
-  return false;
+  return status.granted;
 };
 
 /**
- * Demande à l'utilisateur s'il veut scanner un QRcode
+ * Vérifie les permissions et ouvre le scan
+ *
+ * @returns The QR Plant or null if no permission
  */
 export const askUser = async () => {
-  await checkPermission();
-  const c = confirm("Do you want to scan a barcode?");
-
-  if (c) {
-    startScan();
+  if (await checkPermission()) {
+    return startScan();
   }
+  return null;
 };
 
 /**

@@ -4,7 +4,7 @@ let endTime = null;
 /**
  * Duration of the game (in minutes)
  */
-const GAME_DURATION = 60;
+const GAME_DURATION = 1;
 const GAME_DURATION_MS = GAME_DURATION * 60 * 1000;
 
 /**

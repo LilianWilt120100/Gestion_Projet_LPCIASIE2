@@ -34,8 +34,9 @@ export default {
 
       setScanCount(0);
       startTimer().then(() => {
-        this.$router.push("end");
+        this.$router.push("/end");
       });
+      this.$router.push("/game");
     },
   },
   computed: {
