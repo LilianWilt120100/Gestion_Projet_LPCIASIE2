@@ -12,7 +12,7 @@
 
     <div class="inline">
       <button class="btn btn-nav" v-on:click="openScan"><i class="las la-qrcode"></i>Scanner</button>
-      <button class="btn btn-nav">Retour à la carte</button>
+      <button class="btn btn-nav" v-on:click="goToGame">Retour à la carte</button>
     </div>
   </div>
 </template>
@@ -24,6 +24,12 @@ export default {
   data: () => ({
     plant: null,
   }),
+  methods:{
+    goToGame(e) {
+      e.preventDefault();
+      this.$router.push("/game");
+    },
+  },
   mounted() {
     axios
       .get(process.env.VUE_APP_API_URL + "/plants/" + this.$route.params.id)

@@ -16,7 +16,6 @@
           </tbody>
 
       </table>
-      <p>{{ plants }}</p>
       
   </div>
 </template>

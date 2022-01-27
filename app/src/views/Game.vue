@@ -8,7 +8,7 @@
     </div>
     <div class="inline">
       <button class="btn btn-nav" v-on:click="openScan"><i class="las la-qrcode"></i>Scanner</button>
-      <button class="btn btn-nav">Plante Infos</button>
+      <button class="btn btn-nav" v-on:click="goToPlants">Plantes Infos</button>
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ import { askUser } from "@/js/qrcode.js";
 
 export default {
   methods: {
+
     async openScan() {
       //https://github.com/capacitor-community/barcode-scanner/issues/26#issuecomment-808862821
       document.body.style.display = "none";
@@ -35,6 +36,12 @@ export default {
         document.body.style.display = "";
       }
     },
+
+    goToPlants(e) {
+      e.preventDefault();
+      this.$router.push("/plants");
+    }
+
   },
 };
 </script>
