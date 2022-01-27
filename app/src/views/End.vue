@@ -4,18 +4,10 @@
     <div id="contener">
       <div>
         <img alt="abeille" id="beesmall" src="@/assets/bee.png" />
-        <table id="tabScore">
-          <tr>
-            <!-- <td>Score</td> -->
-            <td>Nombre de fleurs scannées</td>
-            <td>Temps</td>
-          </tr>
-          <tr>
-            <!-- <td>1000</td> -->
-            <td>{{ scanCount }}</td>
-            <td>{{ duration }}</td>
-          </tr>
-        </table>
+        <div class="resultat">
+          <h1>Score : {{ scanCount }}</h1>
+          <h2>Temps : {{ duration }}</h2>
+        </div>
         <br />
         <img
           alt="barre-verte"

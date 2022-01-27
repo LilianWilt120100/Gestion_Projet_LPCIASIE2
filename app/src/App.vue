@@ -33,7 +33,7 @@ h1 {
 }
 
 body {
-  background-image: url("./assets/background.jpg");
+ background-color: #f9f9dd;
   background-size: cover;
   overflow: hidden;
 }
@@ -62,7 +62,6 @@ body {
   width: 300px;
   height: 252px;
   margin-top: 3em;
-  margin-left: 44%;
 }
 
 #barre {
@@ -102,7 +101,6 @@ body {
   }
 
   #miel {
-    margin-left: 24%;
     margin-top: 11vh;
     height: 190px;
     width: 220px;
@@ -171,6 +169,7 @@ body {
     height: 3em;
   }
 }
+
 #map {
   height: 55vh;
 }
@@ -188,5 +187,14 @@ body {
   width: 40vw;
   height: 15vh;
 }
-
+.plant-detail{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+table{
+  text-align: center;
+}
 </style>

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <p class="infos">Scan un maximum de fleurs et revient à la ruche avant la fin du temps réglementaire</p>
+    <p class="infos">Scanne un maximum de fleurs et revient à la ruche avant la fin du temps réglementaire</p>
     <p class="infos">Timer : 00:00</p>
     <img alt="Jardin Jean Marie Pelt" id="map" src="@/assets/map_jmp.png"/>
     <div class="infos">
       <p>Score : 0 pts</p>
     </div>
     <div class="inline">
-      <button class="btn btn-nav" v-on:click="openScan"><i class="las la-qrcode">Scan</i></button>
+      <button class="btn btn-nav" v-on:click="openScan"><i class="las la-qrcode"></i>Scanner</button>
       <button class="btn btn-nav">Plante Infos</button>
     </div>
   </div>

@@ -4,7 +4,7 @@
     <div id="contener">
       <div>
         <img alt="abeille" id="bee" src="@/assets/bee.png" />
-        <br />
+        <br/>
         <img
           alt="barre-verte"
           id="barre"
@@ -13,8 +13,9 @@
       </div>
 
       <a href="#" v-on:click="startGame" class="square_btn"> Jouer </a>
+      <br>
+      <img alt="pot de miel" id="miel" src="@/assets/miel.png" />
     </div>
-    <img alt="" id="miel" src="@/assets/miel.png" />
   </div>
 </template>
 
