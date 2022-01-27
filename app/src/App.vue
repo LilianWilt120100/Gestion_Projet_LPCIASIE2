@@ -171,4 +171,22 @@ body {
     height: 3em;
   }
 }
+#map {
+  height: 55vh;
+}
+.inline{
+  display: flex;
+  margin: 5%;
+  justify-content: space-evenly;
+}
+.infos{
+  padding: 2%;
+  text-align: center;
+}
+.btn-nav{
+  background-color: orange;
+  width: 40vw;
+  height: 15vh;
+}
+
 </style>
