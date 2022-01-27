@@ -1,40 +1,46 @@
 {
-	"name": "time2bee",
-	"version": "1.0.0",
-	"description": "",
-	"scripts": {
-		"dev": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
-		"start:ios": "npm run build && cap run ios",
-		"start:android": "npm run build && cap run android"
-	},
-	"author": "",
-	"license": "ISC",
-	"private": true,
-	"dependencies": {
-		"@capacitor-community/barcode-scanner": "^2.0.1",
-		"@capacitor/android": "^3.3.4",
-		"@capacitor/core": "^3.3.4",
-		"@capacitor/ios": "^3.3.4",
-		"axios": "^0.25.0",
-		"core-js": "^3.6.5",
-		"vue": "^2.6.11",
-		"vue-router": "^3.2.0"
-	},
-	"devDependencies": {
-		"@capacitor/cli": "^3.3.4",
-		"@vue/cli-plugin-babel": "~4.5.0",
-		"@vue/cli-plugin-eslint": "~4.5.0",
-		"@vue/cli-plugin-router": "~4.5.0",
-		"@vue/cli-service": "~4.5.0",
-		"@vue/eslint-config-prettier": "^6.0.0",
-		"babel-eslint": "^10.1.0",
-		"eslint": "^6.7.2",
-		"eslint-plugin-prettier": "^3.3.1",
-		"eslint-plugin-vue": "^6.2.2",
-		"prettier": "^2.2.1",
-		"vue-template-compiler": "^2.6.11",
-		"webpack": "^4.42.0"
-	}
+  "name": "time2bee",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:production": "npm run build && npm run icons && npm run sync",
+    "lint": "vue-cli-service lint",
+    "start:ios": "npm run build && cap run ios",
+    "start:android": "npm run build && cap run android",
+    "icons": "npm run icons:ios && npm run icons:android",
+    "icons:ios": "cordova-res ios --skip-config --copy",
+    "icons:android": "cordova-res android --skip-config --copy",
+    "sync": "cap sync"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@capacitor-community/barcode-scanner": "^2.0.1",
+    "@capacitor/android": "^3.3.4",
+    "@capacitor/core": "^3.3.4",
+    "@capacitor/ios": "^3.3.4",
+    "axios": "^0.25.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^3.3.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "cordova-res": "^0.15.4",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.2.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.0"
+  }
 }

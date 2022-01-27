@@ -20,5 +20,5 @@ npm run start:ios # Nécéssite XCode
 
 ```sh
 npm i
-npm run build
+npm run build:production
 ```
