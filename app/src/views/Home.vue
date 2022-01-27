@@ -12,9 +12,7 @@
         />
       </div>
 
-      <a href="#" v-on:click="startGame" class="square_btn"
-        >Jouer {{ timer }}</a
-      >
+      <a href="#" v-on:click="startGame" class="square_btn"> Jouer </a>
     </div>
     <img alt="" id="miel" src="@/assets/miel.png" />
   </div>
@@ -24,7 +22,6 @@
 // @ is an alias to /src
 import { setScanCount } from "@/js/qrcode";
 import { startTimer } from "@/js/timer";
-import { getTimeLeft } from "@/js/timer";
 
 export default {
   name: "Home",
@@ -38,9 +35,6 @@ export default {
       });
       this.$router.push("/game");
     },
-  },
-  computed: {
-    timer: getTimeLeft,
   },
 };
 </script>

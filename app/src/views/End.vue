@@ -6,12 +6,12 @@
         <img alt="abeille" id="beesmall" src="@/assets/bee.png" />
         <table id="tabScore">
           <tr>
-            <td>Score</td>
+            <!-- <td>Score</td> -->
             <td>Nombre de fleurs scannées</td>
             <td>Temps</td>
           </tr>
           <tr>
-            <td>1000</td>
+            <!-- <td>1000</td> -->
             <td>{{ scanCount }}</td>
             <td>{{ duration }}</td>
           </tr>
@@ -40,8 +40,8 @@ export default {
   computed: {
     scanCount: getScanCount,
     duration() {
-      const duration = getTotalDuration();
-      return duration;
+      const duration = getTotalDuration() ?? "0";
+      return duration.toString();
     },
   },
 };
