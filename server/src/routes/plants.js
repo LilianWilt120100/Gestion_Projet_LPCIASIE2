@@ -2,10 +2,13 @@ const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
 const { generateQR } = require("../qrcode");
 const { db } = require("../dabatase");
+const cors = require("cors");
 
 const IMG_LOCATION = "/img/plants/";
 
 const router = Router();
+
+router.use(cors("http://localhost"));
 
 /**
  * @api {get} /plants Request all plants in DB
