@@ -1,11 +1,12 @@
 const express = require("express");
 const { router: routerPlants } = require("./routes/plants");
+const { join } = require("path");
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use("/", express.static("src/static"));
+app.use("/", express.static(join(__dirname, "static")));
 
 // API DOC
 const swaggerUi = require("swagger-ui-express");
