@@ -7,7 +7,7 @@
     <p class="infos">Timer : {{ timer }}</p>
     <img alt="Jardin Jean Marie Pelt" id="map" src="@/assets/map_jmp.png" />
     <div class="infos">
-      <p>Score : 0 pts</p>
+      <p>Score : {{ scanCount }} pts</p>
     </div>
     <div class="inline">
       <button class="btn btn-nav" v-on:click="openScan">
@@ -22,7 +22,7 @@
 
 <script>
 import Duration from "@icholy/duration";
-import { askUser } from "@/js/qrcode.js";
+import { askUser, getScanCount } from "@/js/qrcode.js";
 import { getTime } from "@/js/timer.js";
 
 let interval = null;
@@ -30,6 +30,7 @@ let interval = null;
 export default {
   data: () => ({
     timer: 0,
+    scanCount: 0,
   }),
   methods: {
     async openScan() {
@@ -51,13 +52,15 @@ export default {
     },
   },
   mounted() {
-    // Setup timer
+    // Setup dynamic values
     this.timer = getTime();
+    this.scanCount = getScanCount();
     if (interval) {
       clearInterval(interval);
     }
     interval = setInterval(() => {
       this.timer = getTime();
+      this.scanCount = getScanCount();
     }, Duration.second);
 
     if (this.$route.query.scan) {
