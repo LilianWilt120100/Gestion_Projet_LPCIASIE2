@@ -1,6 +1,6 @@
 <template>
   <div class="route">
-    <table class="table">
+    <table class="table" v-if="plants">
       <thead>
         <tr>
           <th>Nom</th>
@@ -14,12 +14,14 @@
         </tr>
       </tbody>
     </table>
+    <Spinner v-else />
     <button class="btn btn-nav" @click="$router.push('/game')">Retour</button>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Spinner from "../components/Spinner.vue";
 
 export default {
   data: () => ({
@@ -37,5 +39,6 @@ export default {
         this.$router.push("/game");
       });
   },
+  components: { Spinner },
 };
 </script>
