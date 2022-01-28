@@ -1,14 +1,19 @@
 <template>
   <div>
-    <p class="infos">Scanne un maximum de fleurs et revient à la ruche avant la fin du temps réglementaire</p>
+    <p class="infos">
+      Scanne un maximum de fleurs et revient à la ruche avant la fin du temps
+      réglementaire
+    </p>
     <p class="infos">Timer : 00:00</p>
-    <img alt="Jardin Jean Marie Pelt" id="map" src="@/assets/map_jmp.png"/>
+    <img alt="Jardin Jean Marie Pelt" id="map" src="@/assets/map_jmp.png" />
     <div class="infos">
       <p>Score : 0 pts</p>
     </div>
     <div class="inline">
-      <button class="btn btn-nav" v-on:click="openScan"><i class="las la-qrcode"></i>Scanner</button>
-      <button class="btn btn-nav">Plante Infos</button>
+      <button class="btn btn-nav" v-on:click="openScan">
+        <i class="las la-qrcode"></i>Scanner
+      </button>
+      <router-link class="btn btn-nav" to="/plants">Plante Infos</router-link>
     </div>
   </div>
 </template>
@@ -19,7 +24,7 @@ import { askUser } from "@/js/qrcode.js";
 export default {
   methods: {
     async openScan() {
-      //https://github.com/capacitor-community/barcode-scanner/issues/26#issuecomment-808862821
+      // https://github.com/capacitor-community/barcode-scanner/issues/26#issuecomment-808862821
       document.body.style.display = "none";
       // TODO: User pressed back button
       try {
@@ -35,6 +40,11 @@ export default {
         document.body.style.display = "";
       }
     },
+  },
+  mounted() {
+    if (this.$route.query.scan) {
+      this.openScan();
+    }
   },
 };
 </script>
