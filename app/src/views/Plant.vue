@@ -13,6 +13,7 @@
         v-bind:src="`${apiUrl}/..${plant.images[0]}`"
       />
     </div>
+    <Spinner v-else />
     <div class="inline">
       <button class="btn btn-nav" v-on:click="openScan">
         <i class="las la-qrcode"></i>Scanner
@@ -24,6 +25,7 @@
 
 <script>
 import axios from "axios";
+import Spinner from "../components/Spinner.vue";
 
 export default {
   data: () => ({
@@ -47,5 +49,6 @@ export default {
       this.$router.push("/game?scan=1");
     },
   },
+  components: { Spinner },
 };
 </script>
