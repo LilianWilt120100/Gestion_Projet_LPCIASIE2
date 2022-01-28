@@ -28,6 +28,11 @@ h1 {
   overflow: hidden;
 }
 
+.route {
+  height: 100vh;
+  overflow: auto;
+}
+
 body {
   background-color: #f9f9dd;
   background-size: cover;

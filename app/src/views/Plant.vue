@@ -1,16 +1,17 @@
 <template>
-  <div class="plant-detail" v-if="plant">
-    <h1>{{ plant.name }}</h1>
-    <p>Nom latin : {{ plant.latin_name }}</p>
-    <p>Localisation : {{ plant.garden_spot }}</p>
-    <p>nectar : {{ plant.nectar }}</p>
-    <p>Pollen : {{ plant.pollen }}</p>
+  <div class="route">
+    <div class="plant-detail" v-if="plant">
+      <h1>{{ plant.name }}</h1>
+      <p>Nom latin : {{ plant.latin_name }}</p>
+      <p>Localisation : {{ plant.garden_spot }}</p>
+      <p>nectar : {{ plant.nectar }}</p>
+      <p>Pollen : {{ plant.pollen }}</p>
 
-    <img
-      style="max-width: 360px"
-      v-bind:src="`${apiUrl}/..${plant.images[0]}`"
-    />
-
+      <img
+        style="max-width: 360px"
+        v-bind:src="`${apiUrl}/..${plant.images[0]}`"
+      />
+    </div>
     <div class="inline">
       <button class="btn btn-nav" v-on:click="openScan">
         <i class="las la-qrcode"></i>Scanner

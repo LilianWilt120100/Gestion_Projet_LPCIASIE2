@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="route">
     <p class="infos">
       Scanne un maximum de fleurs et revient à la ruche avant la fin du temps
       réglementaire
     </p>
-    <p class="infos">Timer : 00:00</p>
+    <p class="infos">Timer : {{ timer }}</p>
     <img alt="Jardin Jean Marie Pelt" id="map" src="@/assets/map_jmp.png" />
     <div class="infos">
       <p>Score : 0 pts</p>
@@ -13,15 +13,24 @@
       <button class="btn btn-nav" v-on:click="openScan">
         <i class="las la-qrcode"></i>Scanner
       </button>
-      <router-link class="btn btn-nav" to="/plants">Plante Infos</router-link>
+      <router-link tag="button" class="btn btn-nav" to="/plants">
+        Plante Infos
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
+import Duration from "@icholy/duration";
 import { askUser } from "@/js/qrcode.js";
+import { getTime } from "@/js/timer.js";
+
+let interval = null;
 
 export default {
+  data: () => ({
+    timer: 0,
+  }),
   methods: {
     async openScan() {
       // https://github.com/capacitor-community/barcode-scanner/issues/26#issuecomment-808862821
@@ -42,6 +51,15 @@ export default {
     },
   },
   mounted() {
+    // Setup timer
+    this.timer = getTime();
+    if (interval) {
+      clearInterval(interval);
+    }
+    interval = setInterval(() => {
+      this.timer = getTime();
+    }, Duration.second);
+
     if (this.$route.query.scan) {
       this.openScan();
     }

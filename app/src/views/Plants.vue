@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100vh; overflow: auto">
+  <div class="route">
     <table class="table">
       <thead>
         <tr>
@@ -14,6 +14,7 @@
         </tr>
       </tbody>
     </table>
+    <button class="btn btn-nav" @click="$router.go(-1)">Retour</button>
   </div>
 </template>
 
