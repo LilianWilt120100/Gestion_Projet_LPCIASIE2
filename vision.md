@@ -14,3 +14,35 @@ Dans son domaine, le produit n'a pas d'autres concurrents directs.
 
 Le délai est de 4 semaines. Le budget dédié est d'environ 0 €.
 Avec un budget aussi serrer, on va utiliser un serveur personnel pour héberger l'application lors des livraisons.
+
+
+# Accès panneau de config :
+
+https://oxypomme.fr/time2bee/
+
+
+
+# Time2Bee client
+
+## Development
+
+```sh
+npm i
+npm run dev
+```
+
+## Tests
+
+```sh
+npm i
+npm run start:android # Nécéssite Android Studio
+# ou
+npm run start:ios # Nécéssite XCode
+```
+
+## Production
+
+```sh
+npm i
+npm run build:production
+```
