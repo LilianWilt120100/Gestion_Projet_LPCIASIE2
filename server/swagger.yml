@@ -103,6 +103,8 @@ paths:
                       type: string
                     latin_name:
                       type: string
+                    garden_spot:
+                      type: string
         "500":
           description: An error occured when fetching plants.
           content:
