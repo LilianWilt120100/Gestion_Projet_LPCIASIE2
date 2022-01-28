@@ -17,7 +17,7 @@
       <button class="btn btn-nav" v-on:click="openScan">
         <i class="las la-qrcode"></i>Scanner
       </button>
-      <button class="btn btn-nav" @click="$router.go(-1)">Retour</button>
+      <button class="btn btn-nav" @click="$router.push('/game')">Retour</button>
     </div>
   </div>
 </template>

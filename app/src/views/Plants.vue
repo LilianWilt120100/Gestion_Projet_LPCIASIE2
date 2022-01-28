@@ -14,7 +14,7 @@
         </tr>
       </tbody>
     </table>
-    <button class="btn btn-nav" @click="$router.go(-1)">Retour</button>
+    <button class="btn btn-nav" @click="$router.push('/game')">Retour</button>
   </div>
 </template>
 
