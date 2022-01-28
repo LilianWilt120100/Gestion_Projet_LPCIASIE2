@@ -25,11 +25,11 @@ export const startTimer = () =>
   });
 
 /**
- * Get remaining time left before Promise is resolved
+ * Get time after start
  *
- * @returns {Duration} `null` if there's no timer, else remaining time
+ * @returns {Duration} `null` if there's no timer, else time
  */
-export const getTimeLeft = () =>
+export const getTime = () =>
   timer ? new Duration(new Date() - startTime) : null;
 
 /**

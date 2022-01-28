@@ -18,10 +18,11 @@ router.use(cors("http://localhost"));
 router.get("/", (req, res) => {
 	try {
 		res.json(
-			db.get("plants").map(({ id, name, latin_name }) => ({
+			db.get("plants").map(({ id, name, latin_name, garden_spot }) => ({
 				id,
 				name,
 				latin_name,
+				garden_spot,
 			}))
 		);
 	} catch (error) {

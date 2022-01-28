@@ -1,22 +1,20 @@
 <template>
-  <div> 
-      <table>
-          <thead>
-              <tr>
-                  <td>Nom</td>
-                  <!-- <td>Localisation</td> -->
-              </tr>
-          </thead>
-          <tbody>
-              <tr v-for="plant in plants" :key="plant">
-                  <td><a href="">{{ plant.name }}</a></td>
-                  <!-- {{ plant.id }} -->
-                  <!-- <td>{{ plant.garden_spot }}</td> -->
-              </tr>
-          </tbody>
-
-      </table>
-      
+  <div class="route">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Localisation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(plant, i) in plants" :key="i">
+          <td>{{ plant.name }}</td>
+          <td>{{ plant.garden_spot }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-nav" @click="$router.go(-1)">Retour</button>
   </div>
 </template>
 
@@ -31,7 +29,7 @@ export default {
     axios
       .get(process.env.VUE_APP_API_URL + "/plants")
       .then(({ data }) => {
-        this.plants= data;
+        this.plants = data;
       })
       .catch((err) => {
         console.error(err);

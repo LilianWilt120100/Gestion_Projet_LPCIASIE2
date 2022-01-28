@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="route">
     <h1>Partie terminé !</h1>
     <div id="contener">
       <div>

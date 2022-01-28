@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="route">
     <h1>Bienvenue sur Time2Bee</h1>
     <div id="contener">
       <div>
         <img alt="abeille" id="bee" src="@/assets/bee.png" />
-        <br/>
+        <br />
         <img
           alt="barre-verte"
           id="barre"
@@ -13,7 +13,7 @@
       </div>
 
       <a href="#" v-on:click="startGame" class="square_btn"> Jouer </a>
-      <br>
+      <br />
       <img alt="pot de miel" id="miel" src="@/assets/miel.png" />
     </div>
   </div>
