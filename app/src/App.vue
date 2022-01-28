@@ -191,7 +191,6 @@ body {
 }
 .plant-detail {
   margin: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
